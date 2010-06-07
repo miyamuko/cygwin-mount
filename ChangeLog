@@ -1,0 +1,57 @@
+2008-07-12  MIYAMUKO Katsuyuki
+
+	* cygwin-mount 1.1.0 released!
+
+	* (cygmount-point-info): path 引数で mount 情報を取得するパスを指定できるようにした
+
+	* ライセンスファイルを同梱
+
+2008-05-31  MIYAMUKO Katsuyuki
+
+	* cygwin-mount 1.0.0 released!
+
+	* (search-by-winpath): windows のパスは大文字小文字を無視して検索すべき
+	  (search-mount-point): case-fold を追加
+	  (path-replace-prefix, path-join): 関数の位置を変更
+
+	* バッファ名を *cygwin mount* にした。
+
+	* (cygwin-mount-table, cygwin-mount-cygdrive-prefix): もともと export していない。
+
+	* (cygwin-mount-active-p): cygwin-mount がアクティブかどうかを返す
+	  (cygwin-mount-toggle): cygwin-mount の有効・無効をトグル
+
+	* -  ファイルを分割して整理
+	  - cygwin-mount package を導入
+	  - cygmount->winpath->cygpath を実装
+
+2008-05-25  MIYAMUKO Katsuyuki
+
+	* (cygwin-mount-search): /usr/lib2 が /cygwin/usr/2 になってしまう問題を修正
+
+	* ライセンスを修正 BSD から MIT/X に変更
+
+	* ユーザごとのマウント情報 (mount --user) に対応
+
+	* マウント情報をキャッシュするのをやめた。
+
+	* (cygwin-mount-parse-cygdrive): *cygwin-mount-cygdrive-prefix* が初期化されないバグを修正
+
+2007-08-16  MIYAMUKO Katsuyuki
+
+	* いろいろ更新（覚えていない）
+
+2005-12-02  MIYAMUKO Katsuyuki
+
+	* cygwin-mount 0.1
+
+	* 制限事項を追加
+	  typo修正
+
+2005-12-01  MIYAMUKO Katsuyuki
+
+	* ignore *.lc and XTAGS.
+
+	* NetInstaller 初期化ファイルの追加
+
+	* add cygwin-mount

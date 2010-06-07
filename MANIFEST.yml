@@ -1,0 +1,25 @@
+package: cygwin-mount
+version: 1.1.0
+
+sources:
+  include:
+    - site-lisp/cygwin-mount/**/*.l
+  exclude:
+    - site-lisp/cygwin-mount/**/tests/*.l
+    - site-lisp/cygwin-mount/**/examples/*.l
+
+document:
+  - site-lisp/cygwin-mount/docs/README.rd
+
+files:
+  include:
+    - site-lisp/**/*.l
+    - site-lisp/**/*.lc
+    - site-lisp/cygwin-mount/lib/*.dll
+    - site-lisp/cygwin-mount/examples/**/*.*
+    - site-lisp/cygwin-mount/docs/**/*
+    - site-lisp/cygwin-mount/docs/**/*.*
+    - site-lisp/cygwin-mount/src/**/*.*
+  exclude:
+    - site-lisp/cygwin-mount-scratch.l
+    - site-lisp/cygwin-mount/tests/*.*
