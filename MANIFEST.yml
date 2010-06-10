@@ -21,5 +21,4 @@ files:
     - site-lisp/cygwin-mount/docs/**/*.*
     - site-lisp/cygwin-mount/src/**/*.*
   exclude:
-    - site-lisp/cygwin-mount-scratch.l
     - site-lisp/cygwin-mount/tests/*.*
