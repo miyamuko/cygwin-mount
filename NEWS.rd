@@ -2,70 +2,70 @@
 
 === 2008-07-12 / 1.1.0
 
-cygwin-mount 1.1.0 ƒŠƒŠ[ƒX!
+cygwin-mount 1.1.0 ãƒªãƒªãƒ¼ã‚¹!
 
-: V‹K‹@”\
+: æ–°è¦æ©Ÿèƒ½
 
-    * (cygmount-point-info): path ˆø”‚Å mount î•ñ‚ğæ“¾‚·‚éƒpƒX‚ğw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½
+    * (cygmount-point-info): path å¼•æ•°ã§ mount æƒ…å ±ã‚’å–å¾—ã™ã‚‹ãƒ‘ã‚¹ã‚’æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸ
 
-: ”ñŒİŠ·‚ğŠÜ‚Ş•ÏX“_
+: éäº’æ›ã‚’å«ã‚€å¤‰æ›´ç‚¹
 
-    * ‚È‚µ
+    * ãªã—
 
-: ƒoƒOC³
+: ãƒã‚°ä¿®æ­£
 
-    * ‚È‚µ
+    * ãªã—
 
-: ‚»‚Ì‘¼
+: ãã®ä»–
 
-    * ƒ‰ƒCƒZƒ“ƒXƒtƒ@ƒCƒ‹‚ğ“¯«
+    * ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã‚’åŒæ¢±
 
 
 === 2008-05-31 / 1.0.0
 
-cygwin-mount 1.0.0 ƒŠƒŠ[ƒX!
+cygwin-mount 1.0.0 ãƒªãƒªãƒ¼ã‚¹!
 
 
-: V‹K‹@”\
+: æ–°è¦æ©Ÿèƒ½
 
-    * (cygmount-winpath->cygpath): Windows ‚ÌƒpƒX‚ğ Cygwin ‚ÌƒpƒX‚É•ÏŠ·
+    * (cygmount-winpath->cygpath): Windows ã®ãƒ‘ã‚¹ã‚’ Cygwin ã®ãƒ‘ã‚¹ã«å¤‰æ›
 
-    * (cygmount-cygpath->winpath): Cygwin ‚ÌƒpƒX‚ğ Windows ‚ÌƒpƒX‚É•ÏŠ·
+    * (cygmount-cygpath->winpath): Cygwin ã®ãƒ‘ã‚¹ã‚’ Windows ã®ãƒ‘ã‚¹ã«å¤‰æ›
 
-    * (cygmount-point-info): Cygwin ‚Ìƒ}ƒEƒ“ƒgî•ñ‚ÌƒŠƒXƒg‚ğæ“¾
+    * (cygmount-point-info): Cygwin ã®ãƒã‚¦ãƒ³ãƒˆæƒ…å ±ã®ãƒªã‚¹ãƒˆã‚’å–å¾—
 
-    * (cygwin-mount-active-p): cygwin-mount ‚ªƒAƒNƒeƒBƒu‚©‚Ç‚¤‚©‚ğ•Ô‚·
+    * (cygwin-mount-active-p): cygwin-mount ãŒã‚¢ã‚¯ãƒ†ã‚£ãƒ–ã‹ã©ã†ã‹ã‚’è¿”ã™
 
-    * (cygwin-mount-toggle): cygwin-mount ‚Ì—LŒøE–³Œø‚ğƒgƒOƒ‹
+    * (cygwin-mount-toggle): cygwin-mount ã®æœ‰åŠ¹ãƒ»ç„¡åŠ¹ã‚’ãƒˆã‚°ãƒ«
 
-    * (cygwin-mount-show-mount-point): cygwin ‚Ìƒ}ƒEƒ“ƒgî•ñ‚ğ•\¦
+    * (cygwin-mount-show-mount-point): cygwin ã®ãƒã‚¦ãƒ³ãƒˆæƒ…å ±ã‚’è¡¨ç¤º
 
-    * (cygwin-mount:cygdrive-prefix): cygdrive prefix ‚ğ•Ô‚·
+    * (cygwin-mount:cygdrive-prefix): cygdrive prefix ã‚’è¿”ã™
 
-    * ƒ}ƒEƒ“ƒgƒtƒ‰ƒO‚àæ“¾‚·‚é‚æ‚¤‚É‚µ‚½
+    * ãƒã‚¦ãƒ³ãƒˆãƒ•ãƒ©ã‚°ã‚‚å–å¾—ã™ã‚‹ã‚ˆã†ã«ã—ãŸ
 
-    * cygwin-mount package ‚ğ“±“üEƒ\[ƒX‚ğ®—
+    * cygwin-mount package ã‚’å°å…¥ãƒ»ã‚½ãƒ¼ã‚¹ã‚’æ•´ç†
 
-: ”ñŒİŠ·‚ğŠÜ‚Ş•ÏX“_
+: éäº’æ›ã‚’å«ã‚€å¤‰æ›´ç‚¹
 
-    * ƒ}ƒEƒ“ƒgî•ñ‚ğƒLƒƒƒbƒVƒ…‚·‚é‚Ì‚ğ‚â‚ß‚½
+    * ãƒã‚¦ãƒ³ãƒˆæƒ…å ±ã‚’ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã™ã‚‹ã®ã‚’ã‚„ã‚ãŸ
 
-: ƒoƒOC³
+: ãƒã‚°ä¿®æ­£
 
-    * ƒ†[ƒU‚²‚Æ‚Ìƒ}ƒEƒ“ƒgî•ñ (mount --user) ‚É‘Î‰
+    * ãƒ¦ãƒ¼ã‚¶ã”ã¨ã®ãƒã‚¦ãƒ³ãƒˆæƒ…å ± (mount --user) ã«å¯¾å¿œ
 
-    * (ed::cygwin-mount-table) ‚ğÀs‚µ‚È‚¢‚Æ“®‚©‚È‚©‚Á‚½‚Ì‚ğC³
+    * (ed::cygwin-mount-table) ã‚’å®Ÿè¡Œã—ãªã„ã¨å‹•ã‹ãªã‹ã£ãŸã®ã‚’ä¿®æ­£
 
-    * /usr/lib2 ‚ª c:\cygwin\lib\2 ‚É‚È‚Á‚Ä‚µ‚Ü‚¤–â‘è‚ğC³
-      (–{—ˆ‚Í c:\cygwin\usr\lib2)
+    * /usr/lib2 ãŒ c:\cygwin\lib\2 ã«ãªã£ã¦ã—ã¾ã†å•é¡Œã‚’ä¿®æ­£
+      (æœ¬æ¥ã¯ c:\cygwin\usr\lib2)
 
-: ‚»‚Ì‘¼
+: ãã®ä»–
 
-    * ƒ‰ƒCƒZƒ“ƒX‚ğC³ BSD ‚©‚ç MIT/X ‚É•ÏX
+    * ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’ä¿®æ­£ BSD ã‹ã‚‰ MIT/X ã«å¤‰æ›´
 
 
 === 2005-12-02 / 0.0.1
 
-cygwin-mount 0.0.1 ƒŠƒŠ[ƒX!
+cygwin-mount 0.0.1 ãƒªãƒªãƒ¼ã‚¹!
 
 =end

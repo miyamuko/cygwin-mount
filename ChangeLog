@@ -2,56 +2,56 @@
 
 	* cygwin-mount 1.1.0 released!
 
-	* (cygmount-point-info): path ˆø”‚Å mount î•ñ‚ğæ“¾‚·‚éƒpƒX‚ğw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½
+	* (cygmount-point-info): path å¼•æ•°ã§ mount æƒ…å ±ã‚’å–å¾—ã™ã‚‹ãƒ‘ã‚¹ã‚’æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸ
 
-	* ƒ‰ƒCƒZƒ“ƒXƒtƒ@ƒCƒ‹‚ğ“¯«
+	* ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã‚’åŒæ¢±
 
 2008-05-31  MIYAMUKO Katsuyuki
 
 	* cygwin-mount 1.0.0 released!
 
-	* (search-by-winpath): windows ‚ÌƒpƒX‚Í‘å•¶š¬•¶š‚ğ–³‹‚µ‚ÄŒŸõ‚·‚×‚«
-	  (search-mount-point): case-fold ‚ğ’Ç‰Á
-	  (path-replace-prefix, path-join): ŠÖ”‚ÌˆÊ’u‚ğ•ÏX
+	* (search-by-winpath): windows ã®ãƒ‘ã‚¹ã¯å¤§æ–‡å­—å°æ–‡å­—ã‚’ç„¡è¦–ã—ã¦æ¤œç´¢ã™ã¹ã
+	  (search-mount-point): case-fold ã‚’è¿½åŠ 
+	  (path-replace-prefix, path-join): é–¢æ•°ã®ä½ç½®ã‚’å¤‰æ›´
 
-	* ƒoƒbƒtƒ@–¼‚ğ *cygwin mount* ‚É‚µ‚½B
+	* ãƒãƒƒãƒ•ã‚¡åã‚’ *cygwin mount* ã«ã—ãŸã€‚
 
-	* (cygwin-mount-table, cygwin-mount-cygdrive-prefix): ‚à‚Æ‚à‚Æ export ‚µ‚Ä‚¢‚È‚¢B
+	* (cygwin-mount-table, cygwin-mount-cygdrive-prefix): ã‚‚ã¨ã‚‚ã¨ export ã—ã¦ã„ãªã„ã€‚
 
-	* (cygwin-mount-active-p): cygwin-mount ‚ªƒAƒNƒeƒBƒu‚©‚Ç‚¤‚©‚ğ•Ô‚·
-	  (cygwin-mount-toggle): cygwin-mount ‚Ì—LŒøE–³Œø‚ğƒgƒOƒ‹
+	* (cygwin-mount-active-p): cygwin-mount ãŒã‚¢ã‚¯ãƒ†ã‚£ãƒ–ã‹ã©ã†ã‹ã‚’è¿”ã™
+	  (cygwin-mount-toggle): cygwin-mount ã®æœ‰åŠ¹ãƒ»ç„¡åŠ¹ã‚’ãƒˆã‚°ãƒ«
 
-	* -  ƒtƒ@ƒCƒ‹‚ğ•ªŠ„‚µ‚Ä®—
-	  - cygwin-mount package ‚ğ“±“ü
-	  - cygmount->winpath->cygpath ‚ğÀ‘•
+	* -  ãƒ•ã‚¡ã‚¤ãƒ«ã‚’åˆ†å‰²ã—ã¦æ•´ç†
+	  - cygwin-mount package ã‚’å°å…¥
+	  - cygmount->winpath->cygpath ã‚’å®Ÿè£…
 
 2008-05-25  MIYAMUKO Katsuyuki
 
-	* (cygwin-mount-search): /usr/lib2 ‚ª /cygwin/usr/2 ‚É‚È‚Á‚Ä‚µ‚Ü‚¤–â‘è‚ğC³
+	* (cygwin-mount-search): /usr/lib2 ãŒ /cygwin/usr/2 ã«ãªã£ã¦ã—ã¾ã†å•é¡Œã‚’ä¿®æ­£
 
-	* ƒ‰ƒCƒZƒ“ƒX‚ğC³ BSD ‚©‚ç MIT/X ‚É•ÏX
+	* ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’ä¿®æ­£ BSD ã‹ã‚‰ MIT/X ã«å¤‰æ›´
 
-	* ƒ†[ƒU‚²‚Æ‚Ìƒ}ƒEƒ“ƒgî•ñ (mount --user) ‚É‘Î‰
+	* ãƒ¦ãƒ¼ã‚¶ã”ã¨ã®ãƒã‚¦ãƒ³ãƒˆæƒ…å ± (mount --user) ã«å¯¾å¿œ
 
-	* ƒ}ƒEƒ“ƒgî•ñ‚ğƒLƒƒƒbƒVƒ…‚·‚é‚Ì‚ğ‚â‚ß‚½B
+	* ãƒã‚¦ãƒ³ãƒˆæƒ…å ±ã‚’ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã™ã‚‹ã®ã‚’ã‚„ã‚ãŸã€‚
 
-	* (cygwin-mount-parse-cygdrive): *cygwin-mount-cygdrive-prefix* ‚ª‰Šú‰»‚³‚ê‚È‚¢ƒoƒO‚ğC³
+	* (cygwin-mount-parse-cygdrive): *cygwin-mount-cygdrive-prefix* ãŒåˆæœŸåŒ–ã•ã‚Œãªã„ãƒã‚°ã‚’ä¿®æ­£
 
 2007-08-16  MIYAMUKO Katsuyuki
 
-	* ‚¢‚ë‚¢‚ëXViŠo‚¦‚Ä‚¢‚È‚¢j
+	* ã„ã‚ã„ã‚æ›´æ–°ï¼ˆè¦šãˆã¦ã„ãªã„ï¼‰
 
 2005-12-02  MIYAMUKO Katsuyuki
 
 	* cygwin-mount 0.1
 
-	* §ŒÀ–€‚ğ’Ç‰Á
-	  typoC³
+	* åˆ¶é™äº‹é …ã‚’è¿½åŠ 
+	  typoä¿®æ­£
 
 2005-12-01  MIYAMUKO Katsuyuki
 
 	* ignore *.lc and XTAGS.
 
-	* NetInstaller ‰Šú‰»ƒtƒ@ƒCƒ‹‚Ì’Ç‰Á
+	* NetInstaller åˆæœŸåŒ–ãƒ•ã‚¡ã‚¤ãƒ«ã®è¿½åŠ 
 
 	* add cygwin-mount

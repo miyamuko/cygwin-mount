@@ -1,114 +1,114 @@
-= cygwin-mount - Cygwin �̃p�X���w�肵�ăt�@�C�����J��
+= cygwin-mount - Cygwin のパスを指定してファイルを開く
 
-  * Author: �݂�ނ� ���䂫 ((<URL:mailto:miyamuko@gmail.com>))
+  * Author: みやむこ かつゆき ((<URL:mailto:miyamuko@gmail.com>))
   * Home URL: ((<URL:http://miyamuko.s56.xrea.com/xyzzy/cygwin-mount/intro.htm>))
   * Version: 1.1.0
 
 
 == DESCRIPTION
 
-Cygwin �̃}�E���g�������߂��ăt�@�C������ϊ����܂��B
-find-file ��R�}���h���C�������� cygwin �̃p�X���w�肵�� xyzzy �Ńt�@�C�����J�����Ƃ��ł��܂��B
+Cygwin のマウント情報を解釈してファイル名を変換します。
+find-file やコマンドライン引数に cygwin のパスを指定して xyzzy でファイルを開くことができます。
 
 
 == INSTALL
 
-=== NetInstaller �ŃC���X�g�[��
+=== NetInstaller でインストール
 
 (1) ((<NetInstaller|URL:http://www7a.biglobe.ne.jp/~hat/xyzzy/ni.html>))
-    �� cygwin-mount ���C���X�g�[�����܂��B
+    で cygwin-mount をインストールします。
 
-(2) ((*ni-autoload �𗘗p���Ă��Ȃ��ꍇ*)) �́A
-    ~/.xyzzy �܂��� $XYZZY/site-lisp/siteinit.l �Ɉȉ��̃R�[�h��ǉ����܂��B
+(2) ((*ni-autoload を利用していない場合*)) は、
+    ~/.xyzzy または $XYZZY/site-lisp/siteinit.l に以下のコードを追加します。
 
         ;; cygwin-mount
         (require "cygwin-mount")
         (cygwin-mount-activate)
 
-    �� ni-autoload �𗘗p���Ă���ꍇ�͐ݒ�͕s�v�ł��B
+    ※ ni-autoload を利用している場合は設定は不要です。
 
-(3) �ݒ�𔽉f�����邽�� xyzzy ���ċN�����Ă��������B
+(3) 設定を反映させるため xyzzy を再起動してください。
 
-    ��siteinit.l �ɋL�q�����ꍇ�ɂ͍ă_���v���K�v�ł��B
+    ※siteinit.l に記述した場合には再ダンプが必要です。
 
 
-=== NetInstaller ���g�킸�ɃC���X�g�[��
+=== NetInstaller を使わずにインストール
 
-(1) �A�[�J�C�u���_�E�����[�h���܂��B
+(1) アーカイブをダウンロードします。
 
     ((<URL:http://miyamuko.s56.xrea.com/xyzzy/archives/cygwin-mount.zip>))
 
-(2) �A�[�J�C�u��W�J���āA$XYZZY/site-lisp �z���Ƀt�@�C�����R�s�[���܂��B
+(2) アーカイブを展開して、$XYZZY/site-lisp 配下にファイルをコピーします。
 
-(3) ~/.xyzzy �܂��� $XYZZY/site-lisp/siteinit.l �Ɉȉ��̃R�[�h��ǉ����܂��B
+(3) ~/.xyzzy または $XYZZY/site-lisp/siteinit.l に以下のコードを追加します。
 
         ;; cygwin-mount
         (require "cygwin-mount")
         (cygwin-mount-activate)
 
-(4) �ݒ�𔽉f�����邽�� xyzzy ���ċN�����Ă��������B
+(4) 設定を反映させるため xyzzy を再起動してください。
 
-    ��siteinit.l �ɋL�q�����ꍇ�ɂ͍ă_���v���K�v�ł��B
+    ※siteinit.l に記述した場合には再ダンプが必要です。
 
 
 == MODULE
 
 === PACKAGE
 
-cygwin-mount �͈ȉ��̃p�b�P�[�W�𗘗p���Ă��܂��B
+cygwin-mount は以下のパッケージを利用しています。
 
   * editor
   * cygwin-mount
-    * nickname �� cygmount
+    * nickname は cygmount
 
 === VARIABLE
 
 --- cygwin-mount:*cygwin-mount-reg-section*
 
-    cygwin �̃}�E���g��񂪋L�^����Ă��郌�W�X�g���̃L�[�����w�肵�܂��B
-    �f�t�H���g�� SOFTWARE\Cygnus Solutions\Cygwin\mounts v2 �ł��B
+    cygwin のマウント情報が記録されているレジストリのキー名を指定します。
+    デフォルトは SOFTWARE\Cygnus Solutions\Cygwin\mounts v2 です。
 
 
 === COMMAND
 
 --- editor:cygwin-mount-activate
 
-    �t�@�C�����J���Ƃ��� cygwin �̃p�X�������I�� Windows �̃p�X�ɓǂݑւ���悤��
-    �ݒ肵�܂��B
+    ファイルを開くときに cygwin のパスを自動的に Windows のパスに読み替えるように
+    設定します。
 
-    ����� cygwin �̃p�X���w�肵�ăt�@�C�����J�����Ƃ��ł��܂��B
+    これで cygwin のパスを指定してファイルを開くことができます。
 
-    (�ڂ�������: *before-find-file-hook* ��
-    ed::cygwin-mount-before-find-file-hook ��ǉ����܂��B)
+    (詳しい説明: *before-find-file-hook* に
+    ed::cygwin-mount-before-find-file-hook を追加します。)
 
 --- editor:cygwin-mount-deactivate
 
-    �t�@�C�����J���Ƃ��� cygwin �̃p�X��ϊ����Ȃ��悤�ɂ��܂��B
+    ファイルを開くときに cygwin のパスを変換しないようにします。
 
 --- editor:cygwin-mount-toggle
 
-    cygwin �̃p�X�ϊ��̗L���E������؂�ւ��܂��B
+    cygwin のパス変換の有効・無効を切り替えます。
 
 --- editor:cygwin-mount-show-mount-point
 
-    cygwin �̃}�E���g����\�����܂��B
+    cygwin のマウント情報を表示します。
 
 === FUNCTION
 
 --- editor:cygwin-mount-active-p
 
-    �t�@�C�����J���Ƃ��� cygwin �̃p�X��ϊ�����ꍇ non-nil ��Ԃ��܂��B
+    ファイルを開くときに cygwin のパスを変換する場合 non-nil を返します。
 
 --- cygwin-mount:cygdrive-prefix
 
-    cygdrive prefix ��Ԃ��܂��B
+    cygdrive prefix を返します。
 
         (cygwin-mount:cygdrive-prefix)
         ;;=> "/cygdrive"
 
 --- cygwin-mount:cygmount-cygpath->winpath CYGPATH
 
-    Cygwin �̃p�X�� Windows �̃p�X�ɕϊ����܂��B
+    Cygwin のパスを Windows のパスに変換します。
 
         (cygwin-mount:cygmount-cygpath->winpath "/bin/cygwin1.dll")
         ;;=> "c:\cygwin\bin\cygwin1.dll"
@@ -118,7 +118,7 @@ cygwin-mount �͈ȉ��̃p�b�P�[�W�𗘗p���Ă��܂��B
 
 --- cygwin-mount:cygmount-winpath->cygpath WINPATH
 
-    Windows �̃p�X�� Cygwin �̃p�X�ɕϊ����܂��B
+    Windows のパスを Cygwin のパスに変換します。
 
         (cygwin-mount:cygmount-winpath->cygpath "c:\\Windows")
         ;;=> "/cygdrive/c/Windows"
@@ -128,20 +128,20 @@ cygwin-mount �͈ȉ��̃p�b�P�[�W�𗘗p���Ă��܂��B
 
 --- cygwin-mount:cygmount-point-info &KEY TYPE PATH
 
-    Cygwin �̃}�E���g���̃��X�g���擾���܂��B
+    Cygwin のマウント情報のリストを取得します。
 
       (cygmount::cygmount-point-info :type :system)
       ;;=> (("/usr/lib" "C:\\cygwin\\lib" 10 :system)
       ;;    ("/usr/bin" "C:\\cygwin\\bin" 10 :system)
       ;;    ("/" "C:\\cygwin" 10 :system))
 
-    ������ TYPE �ɂ� :system �� :user ���w�肵�܂��B
+    引数の TYPE には :system か :user を指定します。
 
-      * :system ���w�肷��� system wide �ȃ}�E���g�����擾���܂��B
-      * :user ���w�肷��� user only �ȃ}�E���g�����擾���܂��B
-      * �w�肵�Ȃ��ꍇ�͗����̃}�E���g����Ԃ��܂��B
+      * :system を指定すると system wide なマウント情報を取得します。
+      * :user を指定すると user only なマウント情報を取得します。
+      * 指定しない場合は両方のマウント情報を返します。
 
-    PATH ���w�肷��Ƃ��̃p�X�Ɋ֘A����}�E���g��񂾂���Ԃ��܂��B
+    PATH を指定するとそのパスに関連するマウント情報だけを返します。
 
       (cygmount::cygmount-point-info :type :system :path "/usr/bin")
       ;;=> (("/usr/bin" "C:\\cygwin\\bin" 10 :system)
@@ -150,23 +150,23 @@ cygwin-mount �͈ȉ��̃p�b�P�[�W�𗘗p���Ă��܂��B
 --- cygwin-mount:cygmount-point-cygpath MOUNT-INFO
 
     ((<cygmount-point-info|cygwin-mount:cygmount-point-info &KEY TYPE PATH>))
-    �Ŏ擾�����}�E���g��񂩂� Cygwin �̃p�X���擾���܂��B
+    で取得したマウント情報から Cygwin のパスを取得します。
 
 --- cygwin-mount:cygmount-point-winpath MOUNT-INFO
 
     ((<cygmount-point-info|cygwin-mount:cygmount-point-info &KEY TYPE PATH>))
-    �Ŏ擾�����}�E���g��񂩂� Windows �̃p�X���擾���܂��B
+    で取得したマウント情報から Windows のパスを取得します。
 
 --- cygwin-mount:cygmount-point-flags MOUNT-INFO
 
     ((<cygmount-point-info|cygwin-mount:cygmount-point-info &KEY TYPE PATH>))
-    �Ŏ擾�����}�E���g��񂩂�}�E���g�t���O���擾���܂��B
+    で取得したマウント情報からマウントフラグを取得します。
 
         (let ((mount-table (cygwin-mount:cygmount-point-info)))
           (cygwin-mount:cygmount-point-flags (car mount-table)))
         ;;=> (:binmode :notexec)
 
-    �}�E���g�t���O�͈ȉ��̃L�[���[�h�̃��X�g�ŕԂ��܂��B
+    マウントフラグは以下のキーワードのリストで返します。
 
       * :textmode
       * :binmode
@@ -175,77 +175,77 @@ cygwin-mount �͈ȉ��̃p�b�P�[�W�𗘗p���Ă��܂��B
       * :notexec
       * :managed
 
-    �t���O�̏ڍׂ� man mount ���Ă��������B
+    フラグの詳細は man mount してください。
 
 --- cygwin-mount:cygmount-point-type MOUNT-INFO
 
     ((<cygmount-point-info|cygwin-mount:cygmount-point-info &KEY TYPE PATH>))
-    �Ŏ擾�����}�E���g��񂩂�}�E���g�^�C�v���擾���܂��B
+    で取得したマウント情報からマウントタイプを取得します。
 
         (let ((mount-table (cygwin-mount:cygmount-point-info)))
           (cygwin-mount:cygmount-point-flags (car mount-table)))
         ;;=> :system
 
-    �}�E���g�^�C�v�� :system �܂��� :user ��Ԃ��܂��B
+    マウントタイプは :system または :user を返します。
 
 === OBSOLETE FUNCTION
 
 --- editor:cygwin-mount-resolve cygpath
 
-    Cygwin �̃p�X�� Windows �̃p�X�ɕϊ����܂��B
+    Cygwin のパスを Windows のパスに変換します。
 
-    ����͌݊����̂��߂ɗp�ӂ���Ă��܂��B
-    �����
+    これは互換性のために用意されています。
+    代わりに
     ((<cygmount-cygpath->winpath|cygwin-mount:cygmount-cygpath->winpath CYGPATH>))
-    �𗘗p���Ă��������B
+    を利用してください。
 
 
 == TODO
 
-* �Ȃ�
+* なし
 
 
 == KNOWN BUGS
 
-* cygwin �̃p�X���w�肵�Ă��t�@�C���𐳂����J���Ȃ��ꍇ������܂��B
+* cygwin のパスを指定してもファイルを正しく開けない場合があります。
 
-  �R�}���h���C������t�@�C�����w�肵�����Axyzzy �� *before-find-file-hook*
-  �ɗ���܂łɏ���Ƀh���C�u�������ǉ�����܂��B
-  ���̂��߁A�Ӑ}���Ȃ��t�@�C�����J���Ă��܂��\��������܂��B
+  コマンドラインからファイルを指定し束愛、xyzzy の *before-find-file-hook*
+  に来るまでに勝手にドライブ文字が追加されます。
+  そのため、意図しないファイルを開いてしまう可能性があります。
 
-  ���Ƃ��΁A�ȉ��̂悤�ȃf�B���N�g���\���̏ꍇ:
+  たとえば、以下のようなディレクトリ構成の場合:
 
       D:/
-       �� cygwin/
-       �� �� etc/
-       �� �� �� foo
-       �� �� �� bar
-       �� �� bin/
-       �� �� sbin/
-       �� etc
-          �� foo
+       ├ cygwin/
+       │ ├ etc/
+       │ │ ├ foo
+       │ │ └ bar
+       │ ├ bin/
+       │ └ sbin/
+       └ etc
+          └ foo
 
-  cygwin �ł� /etc �� d:/cygwin/etc �Ƀ}�E���g���Ă���Ƃ��܂��B
+  cygwin での /etc は d:/cygwin/etc にマウントしているとします。
 
-  ������ cygwin ���� xyzzy /etc/foo �Ƃ��ċN�������ꍇ�A*before-find-file-hook*
-  �ɂ� d:/etc/foo ���n����܂��B
+  ここで cygwin から xyzzy /etc/foo として起動した場合、*before-find-file-hook*
+  には d:/etc/foo が渡されます。
 
-  �{���� d:/cygwin/etc/foo ���J�������Ƃ���ł����A
-  cygwin ���� /etc/foo ���w�肳�ꂽ�̂��AWindows ���� d:/etc/foo ��
-  �w�肳�ꂽ���͔��f�ł��Ȃ��̂ŁA���̏ꍇ d:/etc/foo ���J����܂��B
+  本来は d:/cygwin/etc/foo を開きたいところですが、
+  cygwin から /etc/foo を指定されたのか、Windows から d:/etc/foo を
+  指定されたかは判断できないので、この場合 d:/etc/foo が開かれます。
 
-  ����Acygwin ���� xyzzy /etc/bar �ŋN�������ꍇ d:/etc/bar ��
-  �n����܂��B�������Ad:/etc/bar �͑��݂��Ȃ��̂ł��̏ꍇ�A
-  cygwin-mount �ł̓h���C�u�������폜���� /etc/bar ���n���ꂽ�Ƃ݂Ȃ�
-  cygwin �̃p�X�� Windows �̃p�X�ɕϊ����� d:/cygwin/etc/bar ���J���܂��B
+  一方、cygwin から xyzzy /etc/bar で起動した場合 d:/etc/bar が
+  渡されます。しかし、d:/etc/bar は存在しないのでこの場合、
+  cygwin-mount ではドライブ文字を削除して /etc/bar が渡されたとみなし
+  cygwin のパスを Windows のパスに変換して d:/cygwin/etc/bar を開きます。
 
-  �ƁA���̂悤�ɓ��삪�������̂łȂ�ׂ� cygwin ���� cygpath ���g����
-  �ϊ�������� xyzzy �ɓn�����ق����m�����Ǝv���܂��B
+  と、このように動作が怪しいのでなるべく cygwin 側で cygpath を使って
+  変換した上で xyzzy に渡したほうが確実だと思います。
 
 
 == AUTHOR
 
-�݂�ނ� ���䂫 (((<URL:mailto:miyamuko@gmail.com>)))
+みやむこ かつゆき (((<URL:mailto:miyamuko@gmail.com>)))
 
 
 == SEE ALSO
@@ -259,7 +259,7 @@ cygwin-mount �͈ȉ��̃p�b�P�[�W�𗘗p���Ă��܂��B
 
 == COPYRIGHT
 
-cygwin-mount �� MIT/X ���C�Z���X�ɏ]���Ė{�\�t�g�E�F�A���g�p�A�Ĕz�z���邱�Ƃ��ł��܂��B
+cygwin-mount は MIT/X ライセンスに従って本ソフトウェアを使用、再配布することができます。
 
 See cygwin-mount/docs/MIT-LICENSE for full license.
 
